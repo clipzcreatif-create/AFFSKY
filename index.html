@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AffSky | Cinematic Aerial Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #0c0c0c;
+            --text-light: #666666;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fff; }
+        ::-webkit-scrollbar-thumb { background: #000; }
+
+        /* Typography Utilities */
+        .text-display {
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        /* Portfolio Grayscale Hover Effect */
+        .portfolio-card img {
+            filter: grayscale(100%);
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+        
+        .portfolio-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        /* Minimalist Button Hover */
+        .btn-minimal {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-minimal::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: #fff;
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+        
+        .btn-minimal:hover::before {
+            left: 0;
+        }
+        
+        .btn-minimal span {
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+
+        .btn-minimal:hover span {
+            color: #000;
+        }
+
+        /* List Styling for T&C */
+        ul.custom-list {
+            list-style: none;
+            counter-reset: my-counter;
+        }
+        ul.custom-list li {
+            counter-increment: my-counter;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        ul.custom-list li::before {
+            content: counter(my-counter) ".";
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter">AFFSKY.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wide">
+                <a href="#lobby" class="hover:text-gray-500 transition">Beranda</a>
+                <a href="#why-us" class="hover:text-gray-500 transition">Kenapa Kami</a>
+                <a href="#portfolio" class="hover:text-gray-500 transition">Karya</a>
+                <a href="#pricing" class="hover:text-gray-500 transition">Harga</a>
+                <a href="#contact" class="hover:text-gray-500 transition">Kontak</a>
+            </div>
+            <a href="https://wa.me/6285791920577?text=Halo%20AffSky%2C%20saya%20tertarik%20untuk%20sewa%20drone." target="_blank" class="hidden md:inline-block bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wider hover:bg-gray-800 transition">
+                Sewa Unit
+            </a>
+        </div>
+    </nav>
+
+    <!-- LOBBY / HERO SECTION -->
+    <section id="lobby" class="relative h-screen flex flex-col justify-center items-center text-center px-6 pt-16">
+        <div class="max-w-4xl mx-auto z-10">
+            <p class="text-sm md:text-base text-gray-500 uppercase tracking-[0.2em] mb-4 animate-fade-in-up">
+                Professional Aerial Cinematography
+            </p>
+            <h1 class="text-display text-5xl md:text-7xl lg:text-8xl font-black mb-8">
+                MELAMPAUI<br>BATAS VISUAL.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                AffSky menghadirkan perspektif udara premium untuk kebutuhan komersial, event, dan pemetaan. Kami menerbangkan teknologi, Anda menikmati hasilnya.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="btn-minimal bg-black text-white px-8 py-4 text-sm font-bold uppercase tracking-widest">
+                    <span>Lihat Portofolio</span>
+                </a>
+                <a href="#why-us" class="px-8 py-4 text-sm font-bold uppercase tracking-widest border border-black hover:bg-gray-50 transition">
+                    Pelajari Layanan
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute inset-0 z-0 opacity-[0.03]" 
+             style="background-image: linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-24 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-16 border-b border-gray-800 pb-8">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-4 md:mb-0">MENGAPA<br>AFFSKY?</h2>
+                <p class="max-w-md text-gray-400 text-sm leading-relaxed">
+                    Kami memahami bahwa drone bukan sekadar alat, melainkan perpanjangan visi artistik Anda. Berikut adalah standar kualitas yang kami tawarkan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Point 1 -->
+                <div class="group">
+                    <div class="h-12 w-12 border border-white flex items-center justify-center mb-6 rounded-full group-hover:bg-white group-hover:text-black transition">
+                        <span class="text-xl">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Teknologi Terbaru</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Kami mengandalkan <strong>DJI Mini 5 Pro</strong> untuk kualitas gambar 4K HDR yang tajam, serta <strong>DJI Neo</strong> untuk pengambilan gambar cepat dan unik (Palm Takeoff). Teknologi sensor terbaru menjamin kestabilan di udara.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="group">
+                    <div class="h-12 w-12 border border-white flex items-center justify-center mb-6 rounded-full group-hover:bg-white group-hover:text-black transition">
+                        <span class="text-xl">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pilot Berpengalaman</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Keamanan adalah prioritas. Pilot kami memiliki lisensi resmi dan pengalaman jam terbang tinggi untuk berbagai medan, mulai dari perkotaan padat hingga bentang alam ekstrem.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="group">
+                    <div class="h-12 w-12 border border-white flex items-center justify-center mb-6 rounded-full group-hover:bg-white group-hover:text-black transition">
+                        <span class="text-xl">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Solusi All-in-One</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Tidak hanya sewa alat. Kami menyediakan layanan <i>End-to-End</i> mulai dari perencanaan jalur terbang, pengambilan gambar, hingga proses editing (Color Grading) siap tayang.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24 px-6 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">Investment</span>
+                <h2 class="text-4xl font-black mt-2">PILIHAN PAKET</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="border border-gray-200 p-8 hover:border-black transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">SOSMED LITE</h3>
+                    <p class="text-gray-500 text-sm mb-6">Paket hemat untuk konten TikTok/Reels instan.</p>
+                    <div class="text-4xl font-black mb-6">IDR 750rb<span class="text-sm font-normal text-gray-500">/jam</span></div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-center gap-2 font-bold text-black">Unit: DJI Neo (Compact)</li>
+                        <li class="flex items-center gap-2">✓ Cocok untuk Vlog/Selfie Udara</li>
+                        <li class="flex items-center gap-2">✓ Video Portrait (Vertical)</li>
+                        <li class="flex items-center gap-2">✓ File langsung transfer HP</li>
+                        <li class="flex items-center gap-2 text-gray-400">✕ Tidak untuk angin kencang</li>
+                    </ul>
+                    <a href="https://wa.me/6285791920577?text=Halo%20AffSky%2C%20saya%20tertarik%20Paket%20Sosmed%20Lite%20(DJI%20Neo)." class="block text-center bg-gray-100 text-black py-3 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">Pilih Paket</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="border-2 border-black p-8 relative">
+                    <div class="absolute top-0 right-0 bg-black text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">Terlaris</div>
+                    <h3 class="text-xl font-bold mb-2">PRO CREATOR</h3>
+                    <p class="text-gray-500 text-sm mb-6">Standar profesional untuk Company Profile & Event.</p>
+                    <div class="text-4xl font-black mb-6">IDR 2.5jt<span class="text-sm font-normal text-gray-500">/4 jam</span></div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-center gap-2 font-bold text-black">Unit: DJI Mini 5 Pro</li>
+                        <li class="flex items-center gap-2">✓ Resolusi 4K HDR 60fps</li>
+                        <li class="flex items-center gap-2">✓ Stabil & Tahan Angin</li>
+                        <li class="flex items-center gap-2">✓ Termasuk Pilot Profesional</li>
+                        <li class="flex items-center gap-2">✓ Gratis Editing Teaser 1 Menit</li>
+                    </ul>
+                    <a href="https://wa.me/6285791920577?text=Halo%20AffSky%2C%20saya%20tertarik%20Paket%20Pro%20Creator%20(Mini%205%20Pro)." class="block text-center bg-black text-white py-3 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition">Pilih Paket</a>
+                </div>
+
+                <!-- Custom Plan -->
+                <div class="border border-gray-200 p-8 hover:border-black transition duration-300">
+                    <h3 class="text-xl font-bold mb-2">FULL COVERAGE</h3>
+                    <p class="text-gray-500 text-sm mb-6">Kombinasi kedua unit untuk hasil maksimal.</p>
+                    <div class="text-4xl font-black mb-6">IDR 4.5jt<span class="text-sm font-normal text-gray-500">/hari</span></div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-center gap-2 font-bold text-black">Unit: Mini 5 Pro + Neo</li>
+                        <li class="flex items-center gap-2">✓ Unlimited Battery</li>
+                        <li class="flex items-center gap-2">✓ Liputan Indoor & Outdoor</li>
+                        <li class="flex items-center gap-2">✓ Full RAW Footage</li>
+                        <li class="flex items-center gap-2">✓ Prioritas Editing H+3</li>
+                    </ul>
+                    <a href="https://wa.me/6285791920577?text=Halo%20AffSky%2C%20saya%20tertarik%20Paket%20Full%20Coverage." class="block text-center bg-gray-100 text-black py-3 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">Diskusi</a>
+                </div>
+            </div>
+            
+            <!-- Terms & Conditions Section -->
+             <div class="mt-20 pt-10 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-black mb-6">SYARAT & KETENTUAN</h3>
+                    <p class="text-gray-500 text-sm mb-4">Harap dibaca sebelum melakukan pemesanan untuk kenyamanan bersama.</p>
+                </div>
+                <div>
+                    <ul class="custom-list text-sm text-gray-600 space-y-2">
+                        <li><strong>Booking & Pembayaran:</strong> Pemesanan wajib dilakukan minimal H-3 dengan Down Payment (DP) sebesar 50%. Pelunasan dilakukan H-1 atau saat hari H sebelum penerbangan.</li>
+                        <li><strong>Transportasi & Akomodasi:</strong> Harga di atas belum termasuk biaya transportasi ke lokasi, tiket masuk area, dan akomodasi kru (jika di luar kota).</li>
+                        <li><strong>Force Majeure:</strong> Jika terjadi cuaca buruk (hujan/angin kencang) atau larangan terbang mendadak (No Fly Zone VIP), jadwal dapat diubah (reschedule) tanpa biaya tambahan, namun uang DP tidak dapat dikembalikan jika pembatalan sepihak.</li>
+                        <li><strong>Hak Cipta & File:</strong> Klien mendapatkan hak penggunaan komersial. File mentah (raw footage) akan diberikan via Google Drive/SSD setelah pelunasan.</li>
+                        <li><strong>Izin Lokasi:</strong> Perizinan lokasi syuting menjadi tanggung jawab klien, kecuali disepakati lain.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PLACEHOLDER SECTION -->
+    <section id="portfolio" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">Selected Works</span>
+                <h2 class="text-4xl font-black mt-2">GALERI VISUAL</h2>
+            </div>
+
+            <!-- Grid Portofolio -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="portfolio-card relative group cursor-pointer overflow-hidden bg-white shadow-sm aspect-video">
+                    <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Project 1" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                        <h4 class="text-white text-xl font-bold">Urban Mapping</h4>
+                        <p class="text-gray-300 text-sm">Jakarta Selatan</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <div class="portfolio-card relative group cursor-pointer overflow-hidden bg-white shadow-sm aspect-video">
+                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Project 2" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 p-6 opacity-0 group-hover:opacity-100 transition duration-300 z-10">
+                        <h4 class="text-white text-xl font-bold">Event Documentation</h4>
+                        <p class="text-gray-300 text-sm">Music Festival 2024</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <div class="portfolio-card relative group cursor-pointer overflow-hidden bg-white shadow-sm aspect-square">
+                    <img src="https://images.unsplash.com/photo-1527685609591-44b0aef2400b?q=80&w=800&auto=format&fit=crop" 
+                         alt="Project 3" class="w-full h-full object-cover">
+                </div>
+                <div class="portfolio-card relative group cursor-pointer overflow-hidden bg-white shadow-sm aspect-square">
+                    <img src="https://images.unsplash.com/photo-1579965342575-16428a7c8d71?q=80&w=800&auto=format&fit=crop" 
+                         alt="Project 4" class="w-full h-full object-cover">
+                </div>
+                <div class="portfolio-card relative group cursor-pointer overflow-hidden bg-white shadow-sm aspect-square">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b8c9d755d?q=80&w=800&auto=format&fit=crop" 
+                         alt="Project 5" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <p class="text-sm text-gray-500 mb-4">Ingin melihat reel lengkap?</p>
+                 <a href="#" class="inline-block border-b border-black pb-1 text-sm font-bold hover:text-gray-600 transition">Kunjungi Instagram Kami ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / FOOTER -->
+    <footer id="contact" class="bg-black text-white py-20 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">SIAP MENGUDARA?</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">
+                Konsultasikan kebutuhan proyek Anda. Kami akan memberikan rekomendasi unit dan pilot terbaik untuk hasil maksimal.
+            </p>
+            <a href="https://wa.me/6285791920577?text=Halo%20AffSky%2C%20saya%20tertarik%20untuk%20sewa%20drone." target="_blank" class="inline-flex items-center justify-center bg-white text-black px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition rounded-sm">
+                Hubungi via WhatsApp
+            </a>
+            
+            <div class="mt-20 pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 uppercase tracking-wider">
+                <p>&copy; 2025 AffSky Drone Rental.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Instagram</a>
+                    <a href="#" class="hover:text-white">Email</a>
+                    <a href="#" class="hover:text-white">Location</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

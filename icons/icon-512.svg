@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="AffSky">
+  <rect width="512" height="512" rx="112" fill="#000"/>
+  <path d="M91 292L421 116 287 421l-44-127-152-2Z" fill="#fff"/>
+  <path d="M247 283l174-167-134 305-40-138Z" fill="#d1d5db"/>
+  <text x="256" y="452" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-weight="900" font-size="54" letter-spacing="-3">AFFSKY</text>
+</svg>
